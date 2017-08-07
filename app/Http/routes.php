@@ -1,21 +1,23 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+Route::group(['namespace' => "Web"] , function () {
+    Route::any('about' , 'AboutController@index');
+    Route::any('about/{id}' , 'NewsController@index');
+    Route::any('one' , 'StyleController@one');
+    Route::any('two' , 'StyleController@two');
+    Route::any('three' , 'StyleController@three');
+    Route::any('four' , 'StyleController@four');
+    Route::any('five' , 'StyleController@five');
+    Route::any('six' , 'StyleController@six');
+    Route::any('/' , 'WelcomeController@index');
+    Route::any('work' , "WorkController@index");
+});
 
-Route::get('/', 'WelcomeController@index');
+Route::group(['namespace' => "Home"] , function () {
 
-Route::get('home', 'HomeController@index');
+});
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::group(['namespace' => "Api"] , function () {
+
+
+});
