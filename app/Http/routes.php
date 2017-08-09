@@ -11,7 +11,11 @@ Route::group(['namespace' => "Web"] , function () {
     Route::any('six' , 'StyleController@six');
     Route::any('/' , 'WelcomeController@index');
     Route::any('work' , "WorkController@index");
-    Route::any('news/{id}','NewsController@index');
+    Route::any('news/{id}' , 'NewsController@index');
+
+
+    Route::any("test","WorkController@test");// 测试接口
+
 });
 
 Route::group(['namespace' => "Home"] , function () {
@@ -19,7 +23,10 @@ Route::group(['namespace' => "Home"] , function () {
 });
 
 Route::group(['namespace' => "Api"] , function () {
-
-    Route::post('api/obRecruitment',"ApiController@obRecruitment");
-    Route::post('update/Browse/Number',"ApiController@updateBrowseNumber");
+    Route::post('api/obRecruitment' , "ApiController@obRecruitment");
+    Route::post('update/Browse/Number' , "ApiController@updateBrowseNumber");
 });
+
+
+
+
