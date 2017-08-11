@@ -581,7 +581,7 @@
                 error: function () {
                 }
             });
-            // createCodes();//提交之后返回就刷新验证码；
+             createCodes();//提交之后返回就刷新验证码；
         } else {
             alert("请补全内容或检查红色提示框");
         }

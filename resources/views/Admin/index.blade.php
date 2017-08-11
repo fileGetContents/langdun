@@ -132,16 +132,12 @@
             </dd>
         </dl>
         <dl id="menu-member">
-            <dt><i class="Hui-iconfont">&#xe60d;</i> 会员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dt><i class="Hui-iconfont">&#xe60d;</i>投递管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
                     <li><a _href="{{URL('member-list')}}" href="javascript:;">会员列表</a></li>
-                    <li><a _href="{{URL('member-del')}}" href="javascript:;">删除的会员</a></li>
-                    <li><a _href="{{URL('member-level')}}" href="javascript:;">等级管理</a></li>
-                    <li><a _href="{{URL('member-scoreoperation')}}" href="javascript:;">积分管理</a></li>
-                    <li><a _href="{{URL('member-record-browse')}}" href="javascript:void(0)">浏览记录</a></li>
-                    <li><a _href="{{URL('member-record-download')}}" href="javascript:void(0)">下载记录</a></li>
-                    <li><a _href="{{URL('member-record-share')}}" href="javascript:void(0)">分享记录</a></li>
+                    <li><a _href="{{URL('joinLists')}}" href="javascript:;">删除的会员</a></li>
+                    <li><a _href="{{URL('indexLists')}}" href="javascript:;">等级管理</a></li>
                 </ul>
             </dd>
         </dl>

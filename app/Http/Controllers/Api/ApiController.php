@@ -78,4 +78,35 @@ class ApiController extends Controller
     }
 
 
+    /**
+     * 通用下载文件
+     */
+    public function downloadFile(Request $request)
+    {
+        if(getimagesize($_GET['file'])){
+            $type = getimagesize($_GET['file']);
+            $filename = $_GET['file'];     //指定文件名
+            header('Content-Type:' . $type['mime']);   //指定下载文件类型
+            header("Content-Disposition:attachment;filename={$filename}");   //指定下载文件的描述
+            header('Content-Length:' . filesize($filename));  //指定下载文件的大小
+            readfile($filename);    //将文件内容读取出来并直接输出，以便下载
+        } else {
+            $file = $_GET['file'];
+            header("Content-type: application/octet-stream");
+            header('Content-Disposition: attachment; filename="' . basename($file) . '"');
+            header("Content-Length: " . filesize($file));
+        }
+    }
+
+    // 通用修改状态
+    public function uploadTag(Request $request)
+    {
+        $fileTag = $request->input('tag');
+        $fileId = trim($request->input('table')) . "_id";
+
+        dump($request->all());
+        $return = DB::table($request->input('table'))->where($fileId , '=' , $request->input("id"))->update(array ($fileTag => $request->input('value')));
+        echo $return;
+    }
+
 }
