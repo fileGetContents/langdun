@@ -164,8 +164,7 @@
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-                success: function (obj) {
-
+                success: function (obj) {x
                 },
                 error: function () {
                 }

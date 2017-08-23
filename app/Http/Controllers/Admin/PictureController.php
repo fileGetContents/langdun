@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
 class PictureController extends Controller
 {
     //
@@ -18,6 +19,8 @@ class PictureController extends Controller
 
     public function lists()
     {
+        ///addtest
+
         return view($this->file."list");
     }
 
